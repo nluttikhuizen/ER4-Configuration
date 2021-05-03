@@ -29,17 +29,11 @@ set protocols igmp-proxy interface eth2 role downstream
 set protocols igmp-proxy interface eth2 threshold 1
 set protocols igmp-proxy interface eth3 role disabled
 set protocols igmp-proxy interface eth3 threshold 1
-set protocols igmp-proxy interface eth5 role disabled
-set protocols igmp-proxy interface eth5 threshold 1
-set protocols igmp-proxy interface l2tp0 role disabled
-set protocols igmp-proxy interface l2tp0 threshold 1
 set protocols igmp-proxy interface lo role disabled
 set protocols igmp-proxy interface lo threshold 1
-set protocols igmp-proxy interface switch0 role disabled
-set protocols igmp-proxy interface switch0 threshold 1
 set protocols igmp-proxy interface wg0 role disabled
 set protocols igmp-proxy interface wg0 threshold 1
-set protocols static route 213.75.112.0/21 next-hop 10.200.24.1
+set protocols static route 213.75.112.0/21 next-hop <VLAN Gateway> #10.200.24.1
 ```
 
 # IPTV route
