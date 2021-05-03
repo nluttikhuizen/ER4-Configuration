@@ -9,6 +9,12 @@ set interfaces ethernet eth0 firewall local name WAN_LOCAL
 set interfaces ethernet eth0 firewall out name WAN_OUT
 set interfaces ethernet eth0 mtu 1512
 set interfaces ethernet eth0 speed auto
+set interfaces ethernet eth1 address <IP Edgerouter>/<PREFIX>
+set interfaces ethernet eth1 description 'ETH1 - LAN'
+set interfaces ethernet eth1 duplex auto
+set interfaces ethernet eth1 speed auto
+
+#KPN
 set interfaces ethernet eth0 vif 4 address dhcp
 set interfaces ethernet eth0 vif 4 description 'FTTH - VLAN4 IPTV'
 set interfaces ethernet eth0 vif 4 dhcp-options client-option 'send vendor-class-identifier &quot;IPTV_RG&quot;;'
@@ -35,10 +41,6 @@ set interfaces ethernet eth0 vif 6 pppoe 0 mtu 1500
 set interfaces ethernet eth0 vif 6 pppoe 0 name-server auto
 set interfaces ethernet eth0 vif 6 pppoe 0 password kpn
 set interfaces ethernet eth0 vif 6 pppoe 0 user-id <MAC-ADDRESS from KPN provided router(experia)>@internet
-set interfaces ethernet eth1 address <IP Edgerouter>/<PREFIX>
-set interfaces ethernet eth1 description 'ETH1 - LAN'
-set interfaces ethernet eth1 duplex auto
-set interfaces ethernet eth1 speed auto
 
 #creating VLAN interfaces: 
 set interfaces ethernet eth1 vif 2 address <SUBNET>/<PREFIX>

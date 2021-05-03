@@ -30,7 +30,7 @@ set interfaces wireguard wg0 route-allowed-ips true
 set interfaces wireguard wg0 private-key <PRIV KEY SRV> #from the wg genkey command above.
 
 # Allow the client to connect, use <public key from client> as peer
-#peer / clien 1:
+#peer / client 1:
 set interfaces wireguard wg0 peer <PUBLIC KEY ClIENT> allowed-ips <ClientIP> #172.16.90.2/32
 set interfaces wireguard wg0 peer <PUBLIC KEY ClIENT>  persistent-keepalive 30
 
