@@ -33,7 +33,7 @@ set protocols igmp-proxy interface lo role disabled
 set protocols igmp-proxy interface lo threshold 1
 set protocols igmp-proxy interface wg0 role disabled
 set protocols igmp-proxy interface wg0 threshold 1
-set protocols static route 213.75.112.0/21 next-hop <VLAN Gateway> #10.200.24.1
+set protocols static route 213.75.112.0/21 next-hop 10.200.24.1
 ```
 
 # IPTV route
